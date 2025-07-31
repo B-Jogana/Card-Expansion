@@ -33,4 +33,22 @@
     font-size: larger;
 }
 
+@media(max-width: 450px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+         display: none;
+
+    }
+}
+
+#btn{
+    transform: scale(0.98);
+    background-color: aqua;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
 
