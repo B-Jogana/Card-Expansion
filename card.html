@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mycard</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card active" >
+            <h3>color 1</h3>
+        </div>
+        <div class="card" >
+            <h3>color 2</h3>
+        </div>
+        <div class="card " >
+            <h3>color 3</h3>
+        </div>
+        <div class="card " >
+            <h3>color 4</h3>
+        </div>
+        <div class="card " >
+            <h3>color 5</h3>
+        </div>
+    
+    </div>
+
+    <button id="btn">styles</button>
+
+
+
+    <script>
+
+      
+        const myCard = document.querySelectorAll('.card');
+
+        myCard.forEach((card,body) =>{
+            card.addEventListener('click', ()=>{
+                card.style.background = getRandomColor();
+                removeActive();
+                card.classList.add('active'); 
+                
+            })
+
+        })
+
+        function removeActive(){
+            myCard.forEach((card) =>{
+                card.classList.remove('active')
+            })
+        }
+
+         button.addEventListener('click',()=>{
+            myCard.forEach((card)=>{
+                getRandomColor()
+            })
+          
+         })
+
+         body.style.background = card.style.background
+
+        function getRandomColor(){
+            return "#" + Math.floor(Math.random()*1677215).toString(16).padStart(4,"0");
+
+
+
+    }
+    
+    </script>
+    
+</body>
+</html>
